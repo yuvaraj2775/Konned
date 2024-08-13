@@ -19,15 +19,19 @@ import Calender from './Calender';
 
 
 
+
+
 const Mainpg = () => {
 
-    const [value, setvalue] = useState(false)
-    const handlefirst = () => {
-        setvalue(true)
+    // const[dummy,setdummy]=useState(false)
+    const [value, setvalue] = useState("classes")
+    let handlechan=(tab)=>{
+        setvalue(tab)
     }
-    const handlesecond = () => {
-        setvalue(false)
-    }
+    // const handelbuttonchangecolor = () => {
+    //     setdummy(!dummy)
+    // }
+
 
 
     const addingimg = [
@@ -118,7 +122,7 @@ const Mainpg = () => {
     ]
 
     return (
-        <div className='p  text-gray-500  '>
+        <div className='  text-gray-400  '>
             <div className='flex w-full align-middle items-center bg-white justify-evenly h-14'>
                 <div className='flex'>
                     <div className='mt-2 mr-1'><FaAudible />
@@ -159,11 +163,11 @@ const Mainpg = () => {
                     <div >
                         <span className='text-2xl'>My course</span>
                     </div>
-                    <div>
-                        <span onClick={handlefirst} className='text-xl  cursor-pointer font-semibold border-b-2 '>Classes</span>
-                        <span onClick={handlesecond} className='text-xl cursor-pointer font-semibold ml-7 border-b-2 focus:border-violet-500'  >Calender</span>
+                    <div className=''>
+                        <span onClick={()=>handlechan("classes")}  className={`text-xl  cursor-pointer font-semibold  border-b-2 ${value === 'classes' ? 'border-blue-500' : ''}`}>Classes</span>
+                        <span onClick={()=>handlechan("calendar")}   className={`text-xl cursor-pointer font-semibold ml-7 border-b-2 ${value === 'calendar' ? 'border-blue-500' : ''}`}  >Calender</span>
                     </div>
-                    <div className='bg-blue-600 w-32 h-10 rounded'>
+                    <div  className="bg-blue-600 w-32 h-10 rounded">
                         <div className='pt-2 pl-2 flex text-white'>
                             <div>Create class</div>
                             <div className='mt-1 ml-1'><FaPlus /></div>
@@ -172,7 +176,7 @@ const Mainpg = () => {
                     </div>
                 </div>
 
-                {value ?
+                {value ==="classes" ?
             
                
 
@@ -204,7 +208,7 @@ const Mainpg = () => {
                                 <img src={e.imagees} alt='no' className='h-48' />
                                 <div className='font-semibold m-2 mt-3  tracking-wide	text-base text-slate-500'>{e.heading}</div>
                                 <div className='flex ml-2'>
-                                    <img src={e.profileimg} alt='no' className='h-7 w-7 mb-2 rounded-full text-slate-400 ' alt="" />
+                                    <img src={e.profileimg} alt='no' className='h-7 w-7 mb-2 rounded-full text-slate-400 '  />
                                     <div className='font-medium mb-3 ml-3 mt-1 text-sm'>{e.headleaks}</div>
                                 </div>
                             </div>
@@ -233,6 +237,7 @@ const Mainpg = () => {
                     ))
 
                 }
+                
 
                 {
                     afteradd.map((e) => (
