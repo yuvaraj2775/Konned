@@ -88,7 +88,7 @@ const Calender = () => {
 
         <div className='mt-6 flex items-center    bg-white w-full
          h-3/6 overflow pl-6 rounded '>
-            <div className='w-11/12 h-96 overflow-x-hidden mr-2  '>
+            <div className='w-11/12 h-96 -mt-40 overflow-x-hidden mr-2  '>
                 {second.map((e) => (
                     <div className='opacity-50 text-sm font-semibold tracking-wider	'>
                         <div className='flex'>
@@ -120,8 +120,8 @@ const Calender = () => {
                                 </div>
 
                                 <div className='flex ml-10'>
-                                    <div className='mt-1'>
-                                        <CiLocationOn />
+                                    <div className='mt-1 ' >
+                                        <CiLocationOn className='' />
                                     </div>
                                     <div>{e.location}</div>
 
@@ -159,10 +159,10 @@ const Calender = () => {
 
                         <div className='w-4/5 h-32 border-l-8 -mt-5 border-blue-300 ml-16 pl-6 pt-3 bg-purple-100 rounded relative'>
                             <div className='w-3 h-3 bg-blue-300 absolute top-0 right-0 mr-3 rounded-full mt-3'></div>
-                            <div className='font-bold'>{e.hheading}</div>
+                            <div className='font-bold text-slate-500'>{e.hheading}</div>
                             <div className='flex mt-3'>
                                 <div><img src={e.imag} alt='no' className='h-7 w-7 mb-2 rounded-full text-slate-400 ' /></div>
-                                <div className='ml-3'>{e.nam}</div>
+                                <div className='ml-3 text-slate-500  text-sm'>{e.nam}</div>
                             </div>
 
                             <div className='flex mt-3 '>
@@ -170,14 +170,14 @@ const Calender = () => {
                                     <div className='mt-1'>
                                         <IoTimeOutline />
                                     </div>
-                                    <div>{e.date}</div>
+                                    <div className='text-sm font-thin'>{e.date}</div>
                                 </div>
 
                                 <div className='flex ml-10'>
                                     <div className='mt-1'>
                                         <CiLocationOn />
                                     </div>
-                                    <div>{e.location}</div>
+                                    <div className='text-sm font-thin'>{e.location}</div>
 
                                 </div>
                             </div>
@@ -211,10 +211,10 @@ const Calender = () => {
                         <div className='w-4/5 h-32 border-l-8 -mt-5 border-yellow-300 ml-16 pl-6 pt-3 bg-yellow-50 relative  rounded '>
                             <div className='w-3 h-3 bg-yellow-300 absolute top-0 right-0 mr-3 rounded-full mt-3'></div>
 
-                            <div className='font-bold'>{e.hheading}</div>
+                            <div className='font-bold text-slate-500'>{e.hheading}</div>
                             <div className='flex mt-3 '>
                                 <div><img src={e.imag} alt='no' className='h-7 w-7 mb-2 rounded-full ' /></div>
-                                <div className='ml-3'>{e.nam}</div>
+                                <div className='ml-3 text-sm text-slate-500'>{e.nam}</div>
                             </div>
 
 
@@ -223,14 +223,14 @@ const Calender = () => {
                                     <div className='mt-1'>
                                         <IoTimeOutline />
                                     </div>
-                                    <div>{e.date}</div>
+                                    <div className='text-sm font-thin'>{e.date}</div>
                                 </div>
 
                                 <div className='flex ml-10'>
                                     <div className='mt-1 '>
                                         <CiLocationOn />
                                     </div>
-                                    <div>{e.location}</div>
+                                    <div className='text-sm font-thin'>{e.location}</div>
 
                                 </div>
                             </div>
@@ -245,7 +245,7 @@ const Calender = () => {
                 {arr4.map((e) => (
                     <div className='text-sm font-semibold tracking-wider'>
                         <div className='flex'>
-                            <p className='text-sm'>{e.time1}</p>
+                            <p className='text-sm '>{e.time1}</p>
                             <div className=''></div>
 
 
@@ -257,10 +257,10 @@ const Calender = () => {
 
                         <div className='w-4/5 h-32 border-l-8 -mt-5 border-blue-400 ml-16 pl-6 pt-3 bg-purple-200 rounded relative'>
                             <div className='w-3 h-3 bg-blue-400 absolute top-0 right-0 mr-3 rounded-full mt-3'></div>
-                            <div className='font-bold'>{e.hheading}</div>
+                            <div className='font-bold text-slate-500'>{e.hheading}</div>
                             <div className='flex mt-3'>
                                 <div><img src={e.imag} alt='no' className='h-7 w-7 mb-2 rounded-full text-slate-400 ' /></div>
-                                <div className='ml-3'>{e.nam}</div>
+                                <div className='ml-3 text-sm  text-slate-500'>{e.nam}</div>
                             </div>
 
                             <div className='flex mt-3 '>
@@ -268,14 +268,14 @@ const Calender = () => {
                                     <div className='mt-1'>
                                         <IoTimeOutline />
                                     </div>
-                                    <div>{e.date}</div>
+                                    <div className='text-sm font-thin'>{e.date}</div>
                                 </div>
 
                                 <div className='flex ml-10'>
                                     <div className='mt-1'>
                                         <CiLocationOn />
                                     </div>
-                                    <div>{e.location}</div>
+                                    <div className='text-sm font-thin'>{e.location}</div>
 
                                 </div>
                             </div>
@@ -298,12 +298,259 @@ const Calender = () => {
             </div>
 
 
-            <div className='w-2/5 '><Calendar />
+            <div className='w-2/5 t'>
+<div class="flex items-center justify-center text-sm py-8 px-4 ">
+
+
+            <div class="max-w-sm w-full text-sm shadow-lg">
+                <div class="md:p-8 p-5 dark:bg-white bg-white rounded-t text-sm ">
+                    <div class=" flex items-center    text-sm">
+                        
+                        <div class="flex items-center justify-evenly">     
+                            <button aria-label="calendar backward" class="  border-2 rounded-full border-slate-300 dark:text-slate-500">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <polyline points="15 6 9 12 15 18" />
+                            </svg>
+                        </button>
+                        <div className='ml-10 mr-14'>
+                        <span  tabindex="0" class="focus:outline-none   font-medium dark:text-slate-500 text-base text-slate-200">October 2020</span>
+                        </div>
+                        
+                        <button aria-label="calendar forward" class="border-2 border-slate-300 dark:text-slate-500 rounded-full"> 
+                              <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler  icon-tabler-chevron-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <polyline points="9 6 15 12 9 18" />
+                            </svg>
+                        </button>
+
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between pt-12 overflow-x-auto text-xs">
+                        <table class="w-full">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <div class="w-full flex justify-center">
+                                            <p class=" font-medium text-center text-gray-800 dark:text-slate-500">Mo</p>
+                                        </div>
+                                    </th>
+                                    <th>
+                                        <div class="w-full flex justify-center">
+                                            <p class=" font-medium text-center text-gray-800 dark:text-slate-500">Tu</p>
+                                        </div>
+                                    </th>
+                                    <th>
+                                        <div class="w-full flex justify-center">
+                                            <p class=" font-medium text-center text-gray-800 dark:text-slate-500">We</p>
+                                        </div>
+                                    </th>
+                                    <th>
+                                        <div class="w-full flex justify-center">
+                                            <p class=" font-medium text-center text-gray-800 dark:text-slate-500">Th</p>
+                                        </div>
+                                    </th>
+                                    <th>
+                                        <div class="w-full flex justify-center">
+                                            <p class=" font-medium text-center text-gray-800 dark:text-slate-500">Fr</p>
+                                        </div>
+                                    </th>
+                                    <th>
+                                        <div class="w-full flex justify-center">
+                                            <p class=" font-medium text-center text-gray-800 dark:text-slate-500">Sa</p>
+                                        </div>
+                                    </th>
+                                    <th>
+                                        <div class="w-full flex justify-center">
+                                            <p class=" font-medium text-center text-gray-800 dark:text-slate-500">Su</p>
+                                        </div>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="pt-6">
+                                        <div class="px-2 py-2 cursor-pointer flex w-full justify-center"></div>
+                                    </td>
+                                    <td class="pt-6">
+                                        <div class="px-2 py-2 cursor-pointer flex w-full justify-center"></div>
+                                    </td>
+                                    <td>
+                                        <div class="px-2 py-2 cursor-pointer flex w-full justify-center"></div>
+                                    </td>
+                                    <td class="pt-6">
+                                        <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                            <p class="text-base text-gray-500 dark:text-slate-500">1</p>
+                                        </div>
+                                    </td>
+                                    <td class="pt-6">
+                                        <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                            <p class="text-base text-gray-500 dark:text-slate-500 ">2</p>
+                                        </div>
+                                    </td>
+                                    <td class="pt-6">
+                                        <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                            <p class=" text-gray-500 dark:text-slate-500">3</p>
+                                        </div>
+                                    </td>
+                                    <td class="pt-6">
+                                        <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                            <p class=" text-gray-500 dark:text-slate-500">4</p>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                            <p class=" text-gray-500 dark:text-slate-500 font-medium">5</p>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                            <p class=" text-gray-500 dark:text-slate-500 font-medium">6</p>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                            <p class=" text-gray-500 dark:text-slate-500 font-medium">7</p>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="w-full h-full">
+                                            <div class="flex items-center justify-center w-full rounded-full cursor-pointer">
+                                                <a  role="link" tabindex="0" class="focus:outline-none  focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 focus:bg-indigo-500 hover:bg-indigo-500 w-8 h-8 flex items-center justify-center  text-white bg-slate-300 rounded-full">8</a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                            <p class="text-base text-gray-500 dark:text-slate-500 ">9</p>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                            <p class=" text-gray-500 dark:text-slate-500">10</p>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                            <p class=" text-gray-500 dark:text-slate-500">11</p>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                            <p class=" text-gray-500 dark:text-slate-500 font-medium">12</p>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                            <p class=" text-gray-500 dark:text-slate-500 font-medium">13</p>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                            <p class=" text-gray-500 dark:text-slate-500 font-medium">14</p>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                            <p class="focus:outline-none  focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 focus:bg-indigo-500 hover:bg-indigo-500 w-8 h-8 flex items-center justify-center  text-white bg-slate-300 rounded-full">15</p>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                            <p class="focus:outline-none  focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 focus:bg-indigo-500 hover:bg-indigo-500 w-8 h-8 flex items-center justify-center  text-white bg-indigo-500 rounded-full">16</p>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                            <p class=" text-gray-500 dark:text-slate-500">17</p>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                            <p class=" text-gray-500 dark:text-slate-500">18</p>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                            <p class=" text-gray-500 dark:text-slate-500 font-medium">19</p>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                            <p class=" text-gray-500 dark:text-slate-500 font-medium">20</p>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                            <p class=" text-gray-500 dark:text-slate-500 font-medium">21</p>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                            <p class="focus:outline-none  focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 focus:bg-indigo-500 hover:bg-indigo-500 w-8 h-8 flex items-center justify-center  text-white bg-slate-300 rounded-full">22</p>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                            <p class=" text-gray-500 dark:text-slate-500 font-medium">23</p>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                            <p class=" text-gray-500 dark:text-slate-500">24</p>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                            <p class=" text-gray-500 dark:text-slate-500">25</p>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                            <p class=" text-gray-500 dark:text-slate-500 font-medium">26</p>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                            <p class=" text-gray-500 dark:text-slate-500 font-medium">27</p>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                            <p class=" text-gray-500 dark:text-slate-500 font-medium">28</p>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                            <p class=" focus:outline-none  focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 focus:bg-indigo-500 hover:bg-indigo-500 w-8 h-8 flex items-center justify-center  text-white bg-slate-300 rounded-full">29</p>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                            <p class=" text-gray-500 dark:text-slate-500 font-medium">30</p>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+               
+            </div>
+        </div>
                 {
                     dateaddd.map((e) => (
-                        <div className='mt-10 gap-5  '>
+                        <div className='mt-10 gap-5 text-base'>
                             <div className='flex ml-3 mb-4 font-semibold opacity-55  text-s'>
-                            <p  >11.00</p>
+                            <p className='t' >11.00</p>
                             <p className='w-3 h-3 bg-green-800 m-2 rounded-full'></p>
                                 <p><del>{e.date1}</del></p>
                                
@@ -311,13 +558,13 @@ const Calender = () => {
                             <div className='flex ml-3 mb-4  font-semibold  text-s'>
                             <p  >14.00</p>
                             <p className='w-3 h-3 mb-4 opacity-55 bg-blue-300 m-2 rounded-full'></p>
-                                <p className='opacity-55 '>{e.dal2}</p>
+                                <p className='opacity-55  '>{e.dal2}</p>
                                
                             </div>
                             <div className='flex ml-3 mb-4  font-semibold text-s'>
                             <p  >16.00</p>
                             <p className='w-3 h-3 opacity-55 bg-yellow-300 m-2 rounded-full'></p>
-                                <p className='opacity-55 text-base'>{e.olr3}</p>
+                                <p className='opacity-55 '>{e.olr3}</p>
                                
                             </div>
                             {/* <p className='ml-5 mt-3'><span>11.00</span><span className='w-3 h-3 bg-green-800 m-2'></span></p>
